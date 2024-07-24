@@ -1,0 +1,98 @@
+/* src/pages/Home.css */
+.home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .home-header h1 {
+    margin: 0;
+  }
+  
+  .home-header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .home-header nav ul li {
+    margin: 0 10px;
+  }
+  
+  .home-header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  .home-text {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .home-text h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  .home-text h2 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .typewriter-container {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .typewriter {
+    font-weight: bold;
+  }
+  
+  .home-buttons {
+    margin-top: 20px;
+  }
+  
+  .home-buttons .btn-primary, .home-buttons .btn-secondary {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .home-buttons .btn-primary {
+    background-color: #ffd700;
+    color: black;
+  }
+  
+  .home-buttons .btn-secondary {
+    background-color: #000;
+    color: #ffd700;
+    border: 1px solid #ffd700;
+  }
+  
+  .home-image {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .home-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
