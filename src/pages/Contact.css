@@ -1,0 +1,54 @@
+/* src/pages/Contact.css */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-container.dark {
+    background-color: #333;
+    color: white;
+  }
+  
+  .contact-container.light {
+    background-color: white;
+    color: #333;
+  }
+  
+  .contact-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .contact-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  
+  .contact-socials {
+    font-size: 1.5em;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    color: inherit;
+    font-size: 2em;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ffd700; /* Change to your preferred hover color */
+  }
+  

@@ -1,57 +1,77 @@
 // src/pages/Contact.js
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaLinkedin, FaGithub, FaEnvelope, FaCode } from 'react-icons/fa';
+import './Contact.css';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [errors, setErrors] = useState({});
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+const Contact = ({ isDarkMode }) => {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.5,
+        duration: 0.5,
+      },
+    },
   };
 
-  const validateForm = () => {
-    const newErrors = {};
-    if (!formData.name) newErrors.name = 'Name is required';
-    if (!formData.email) newErrors.email = 'Email is required';
-    if (!formData.message) newErrors.message = 'Message is required';
-    return newErrors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formErrors = validateForm();
-    if (Object.keys(formErrors).length === 0) {
-      console.log('Form data submitted:', formData);
-    } else {
-      setErrors(formErrors);
-    }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (custom) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: custom * 0.5,
+        duration: 0.5,
+      },
+    }),
   };
 
   return (
-    <div>
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" name="name" value={formData.name} onChange={handleChange} />
-          {errors.name && <span>{errors.name}</span>}
-        </label>
-        <br />
-        <label>
-          Email:
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
-          {errors.email && <span>{errors.email}</span>}
-        </label>
-        <br />
-        <label>
-          Message:
-          <textarea name="message" value={formData.message} onChange={handleChange}></textarea>
-          {errors.message && <span>{errors.message}</span>}
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
+    <div className={`contact-container ${isDarkMode ? 'dark' : 'light'}`}>
+      <motion.h1
+        className="contact-title"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        custom={1}
+      >
+        {"Let's Get In Touch"}
+      </motion.h1>
+      <motion.p
+        className="contact-description"
+        variants={itemVariants}
+        initial="hidden"
+        animate="visible"
+        custom={2}
+      >
+        As of now, I'm not looking for any new job opportunities, but my inbox is always open if you want to communicate with me. Hit me up if you have some question, want a collaboration or just play a game of chess. I'll try to get back to you as soon as I can.
+      </motion.p>
+      <motion.div
+        className="contact-socials"
+        variants={itemVariants}
+        initial="hidden"
+        animate="visible"
+        custom={3}
+      >
+        <h2>Here are my Socials</h2>
+        <div className="social-icons">
+          <a href="https://www.linkedin.com/in/jacobtordjman" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com/jacobtordjman" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+          <a href="https://leetcode.com/JakeWanSkywalker" target="_blank" rel="noopener noreferrer">
+            <FaCode />
+          </a>
+          <a href="mailto:jacobtordjman10220@gmail.com" target="_blank" rel="noopener noreferrer">
+            <FaEnvelope />
+          </a>
+        </div>
+      </motion.div>
     </div>
   );
 };
