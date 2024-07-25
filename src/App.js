@@ -13,29 +13,27 @@ const portfoliobg = require('./assets/images/portfoliobg.png').default;
 const portfoliobginverse = require('./assets/images/portfoliobginverse.png').default;
 
 function App() {
-  const [bgImage, setBgImage] = useState(portfoliobg);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleBackground = () => {
-    setBgImage((prevBgImage) =>
-      prevBgImage === portfoliobg ? portfoliobginverse : portfoliobg
-    );
+    setIsDarkMode(!isDarkMode);
   };
 
   return (
     <div
-      className="App"
+      className={`App ${isDarkMode ? 'dark' : 'light'}`}
       style={{
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: `url(${isDarkMode ? portfoliobg : portfoliobginverse})`,
       }}
     >
-      <Header toggleBackground={toggleBackground} />
+      <Header isDarkMode={isDarkMode} toggleBackground={toggleBackground} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 }

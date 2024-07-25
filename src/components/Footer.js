@@ -2,9 +2,9 @@
 import React from 'react';
 import './Footer.css';
 
-const Footer = () => {
+const Footer = ({ isDarkMode }) => {
   return (
-    <footer>
+    <footer className={isDarkMode ? 'dark' : 'light'}>
       <p>© 2024 My Portfolio</p>
     </footer>
   );
