@@ -15,13 +15,4 @@
 
 .App .footer {
   margin-top: auto;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-.App.light .footer {
-  background-color: white;
-  color: #333;
 }

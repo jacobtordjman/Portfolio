@@ -52,3 +52,27 @@
     color: #ffd700; /* Change to your preferred hover color */
   }
   
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 2em;
+    }
+  
+    .contact-description {
+      font-size: 1em;
+    }
+  
+    .contact-socials {
+      font-size: 1.2em;
+    }
+  
+    .social-icons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .social-icons a {
+      font-size: 1.5em;
+    }
+  }
+  
