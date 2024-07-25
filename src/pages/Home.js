@@ -9,7 +9,7 @@ const Home = () => {
       <div className="home-content">
         <div className="home-text">
           <h2>Hi there,</h2>
-          <h1>My name is [Your Name]</h1>
+          <h1>My name is Jacob</h1>
           <h2 className="typewriter-container">I am a&nbsp; <span className="typewriter">
             <Typewriter
               options={{
