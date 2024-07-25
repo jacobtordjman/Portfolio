@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ toggleBackground }) => {
   return (
     <header className="home-header">
       <h1>My Portfolio</h1>
@@ -13,6 +13,7 @@ const Header = () => {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/contact">Contact</Link></li>
+          <li><button className="toggle-bg-button" onClick={toggleBackground}>Toggle Background</button></li>
         </ul>
       </nav>
     </header>
