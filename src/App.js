@@ -17,7 +17,6 @@ function App() {
 
   const toggleBackground = () => {
     setIsDarkMode(!isDarkMode);
-    console.log("Dark Mode Toggled:", !isDarkMode);
   };
 
   return (

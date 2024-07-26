@@ -5,10 +5,10 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 import '../styles/Header.css';
 
 const Header = ({ isDarkMode, toggleBackground }) => {
-  const handleToggleClick = () => {
-    console.log("Toggling Dark Mode from Header");
-    toggleBackground();
-  }
+  // const handleToggleClick = () => {
+  //   console.log("Toggling Dark Mode from Header");
+  //   toggleBackground();
+  // };
 
   return (
     <header className={`home-header ${isDarkMode ? 'dark' : 'light'}`}>
@@ -20,9 +20,9 @@ const Header = ({ isDarkMode, toggleBackground }) => {
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li>
-            <button 
-              className={`toggle-bg-button ${isDarkMode ? 'dark' : 'light'}`} 
-              onClick={handleToggleClick}
+            <button
+              className={`toggle-bg-button ${isDarkMode ? 'dark' : 'light'}`}
+              onClick={toggleBackground}
               aria-label="Toggle Background"
             >
               {isDarkMode ? <FaSun /> : <FaMoon />}

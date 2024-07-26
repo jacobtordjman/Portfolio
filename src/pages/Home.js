@@ -5,7 +5,6 @@ import Typewriter from 'typewriter-effect';
 import { useNavigate } from 'react-router-dom';
 
 const Home = ({ isDarkMode }) => {
-  console.log("Home Component - isDarkMode:", isDarkMode);
   const navigate = useNavigate();
   
   const handleContactClick = () => {
@@ -21,7 +20,6 @@ const Home = ({ isDarkMode }) => {
 
   return (
     <div className={`home-container ${isDarkMode ? 'dark' : 'light'}`}>
-      {console.log("Rendering Home - isDarkMode:", isDarkMode)}
       <div className="home-content">
         <div className="home-text">
           <h2>Hi there,</h2>

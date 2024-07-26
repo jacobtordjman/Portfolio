@@ -1,20 +1,30 @@
-/* src/pages/Home.css */
 .home-container {
   text-align: center;
   padding: 20px;
+}
+
+.home-container.dark {
+  color: white;
+}
+
+.home-container.light {
+  color: black;
 }
 
 .home-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: white;
   padding: 10px;
 }
 
+.home-header.dark {
+  background-color: rgba(51, 51, 51);
+  color: white;
+}
+
 .home-header.light {
-  background-color: white;
+  background-color: rgba(255, 255, 255);
   color: #333;
 }
 
@@ -69,15 +79,6 @@
   padding: 20px;
 }
 
-/* .home-text.dark {
-  background-color: #333;
-  color: white;
-}
-
-.home-text.light {
-  color: #333;
-  background-color: white;
-} */
 .home-text h1 {
   font-size: 3em;
   margin: 0;
@@ -140,17 +141,6 @@
   height: auto;
 }
 
-.home-container.dark .home-text h1,
-.home-container.dark .home-text h2 {
-    color: white; /* Text color for dark mode */
-}
-
-.home-container.light .home-text h1,
-.home-container.light .home-text h2 {
-    color: #333; /* Text color for light mode */
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .home-header {
     flex-direction: column;
@@ -184,5 +174,6 @@
 
   .home-image img {
     max-width: 80%;
+    display: none; /* Hide on mobile */
   }
 }
