@@ -1,0 +1,28 @@
+/* src/pages/About.css */
+.about-container {
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .about-container.dark {
+    background-color: transparent;
+    color: white;
+  }
+  
+  .about-container.light {
+    background-color: transparent;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container h1 {
+      font-size: 2em;
+    }
+  
+    .about-container p {
+      font-size: 1em;
+    }
+  }
+  

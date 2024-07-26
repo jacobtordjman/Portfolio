@@ -1,0 +1,28 @@
+/* src/pages/Projects.css */
+.projects-container {
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .projects-container.dark {
+    background-color: transparent;
+    color: white;
+  }
+  
+  .projects-container.light {
+    background-color: transparent;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .projects-container h1 {
+      font-size: 2em;
+    }
+  
+    .projects-container p {
+      font-size: 1em;
+    }
+  }
+  

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = ({ isDarkMode }) => {
   const navigate = useNavigate();
-  
+
   const handleContactClick = () => {
     navigate('/contact');
   };

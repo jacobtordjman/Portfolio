@@ -10,7 +10,7 @@ const Header = ({ isDarkMode, toggleBackground }) => {
       <h1>My Portfolio</h1>
       <nav aria-label="Main Navigation">
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/home">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/contact">Contact</Link></li>

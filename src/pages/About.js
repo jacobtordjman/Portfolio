@@ -1,11 +1,12 @@
 // src/pages/About.js
 import React from 'react';
+import './About.css';
 
-const About = () => {
+const About = ({ isDarkMode }) => {
   return (
-    <div>
-      <h2>About Me</h2>
-      <p>Details about yourself, your background, and your skills.</p>
+    <div className={`about-container ${isDarkMode ? 'dark' : 'light'}`}>
+      <h1>About Me</h1>
+      <p>{"I'm a passionate developer..."}</p>
     </div>
   );
 };
