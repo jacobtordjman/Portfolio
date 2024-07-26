@@ -69,6 +69,15 @@
   padding: 20px;
 }
 
+/* .home-text.dark {
+  background-color: #333;
+  color: white;
+}
+
+.home-text.light {
+  color: #333;
+  background-color: white;
+} */
 .home-text h1 {
   font-size: 3em;
   margin: 0;
