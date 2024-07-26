@@ -16,3 +16,21 @@
 .App .footer {
   margin-top: auto;
 }
+
+.home-header.dark {
+  background-color: #333;
+  color: white;
+}
+
+.home-header.light {
+  background-color: white;
+  color: #333;
+}
+
+.toggle-bg-button.dark {
+  color: white;
+}
+
+.toggle-bg-button.light {
+  color: #333;
+}
