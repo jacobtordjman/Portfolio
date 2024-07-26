@@ -6,15 +6,15 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = ({ isDarkMode }) => {
   const navigate = useNavigate();
-
+  
   const handleContactClick = () => {
     navigate('/contact');
   };
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '../assets/files/CV.pdf'; // Update this with the actual path to your CV file
-    link.download = 'Jacob_Tordjman.pdf';
+    link.href = '/path/to/your/cv.pdf'; // Update this with the actual path to your CV file
+    link.download = 'My_CV.pdf';
     link.click();
   };
 
