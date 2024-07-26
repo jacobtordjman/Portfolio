@@ -9,8 +9,8 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import './App.css';
 
-const portfoliobg = require('./assets/images/portfoliobg.png').default;
-const portfoliobginverse = require('./assets/images/portfoliobginverse.png').default;
+const portfoliobg = require('./assets/images/portfoliobg.jpg').default;
+const portfoliobginverse = require('./assets/images/portfoliobginverse.jpg').default;
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
