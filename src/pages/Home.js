@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/Home.css';
 import Typewriter from 'typewriter-effect';
 import { useNavigate } from 'react-router-dom';
+import ProgrammingImage from '../assets/images/Programming2.svg';
 
 const Home = ({ isDarkMode }) => {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const Home = ({ isDarkMode }) => {
           </div>
         </div>
         <div className="home-image">
-          <img src={require('../assets/images/Programming2.svg').default} alt="Illustration" />
+          <img src={ProgrammingImage} alt="Illustration" />
         </div>
       </div>
     </div>
