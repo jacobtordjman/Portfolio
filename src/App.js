@@ -24,6 +24,9 @@ function App() {
       className={`App ${isDarkMode ? 'dark' : 'light'}`}
       style={{
         backgroundImage: `url(${isDarkMode ? portfoliobg : portfoliobginverse})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
       }}
     >
       <Header isDarkMode={isDarkMode} toggleBackground={toggleBackground} />
