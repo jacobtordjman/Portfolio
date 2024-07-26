@@ -131,6 +131,16 @@
   height: auto;
 }
 
+.home-container.dark .home-text h1,
+.home-container.dark .home-text h2 {
+    color: white; /* Text color for dark mode */
+}
+
+.home-container.light .home-text h1,
+.home-container.light .home-text h2 {
+    color: #333; /* Text color for light mode */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .home-header {

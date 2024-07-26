@@ -58,16 +58,16 @@ const Contact = ({ isDarkMode }) => {
       >
         <h2>Here are my Socials</h2>
         <div className="social-icons">
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/jacobtordjman" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jacobtordjman" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://leetcode.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://leetcode.com/JakeWanSkywalker" target="_blank" rel="noopener noreferrer">
             <FaCode />
           </a>
-          <a href="mailto:youremail@example.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:jacobtordjman10220@gmail.com" target="_blank" rel="noopener noreferrer">
             <FaEnvelope />
           </a>
         </div>

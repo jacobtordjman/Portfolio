@@ -13,8 +13,8 @@ const Home = ({ isDarkMode }) => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/path/to/your/cv.pdf'; // Update this with the actual path to your CV file
-    link.download = 'My_CV.pdf';
+    link.href = '../assets/files/CV.pdf'; // Update this with the actual path to your CV file
+    link.download = 'Jacob Tordjman.pdf';
     link.click();
   };
 

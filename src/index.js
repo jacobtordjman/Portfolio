@@ -9,7 +9,7 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router> {/* Removed basename for local development */}
+    <Router basename="/home">
       <App />
     </Router>
   </React.StrictMode>
