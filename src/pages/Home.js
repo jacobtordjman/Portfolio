@@ -1,6 +1,6 @@
 // src/pages/Home.js
 import React from 'react';
-import './Home.css';
+import '../styles/Home.css';
 import Typewriter from 'typewriter-effect';
 import { useNavigate } from 'react-router-dom';
 

@@ -1,6 +1,7 @@
 // src/components/Project.js
 import React from 'react';
-import './Project.css';
+import '../styles/Project.css';
+
 
 const Project = ({ title, description, imageUrl, imageAlt }) => {
   return (

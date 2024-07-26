@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaEnvelope, FaCode } from 'react-icons/fa';
-import './Contact.css';
+import '../styles/Contact.css';
 
 const Contact = ({ isDarkMode }) => {
   const containerVariants = {
