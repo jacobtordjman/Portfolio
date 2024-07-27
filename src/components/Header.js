@@ -1,46 +1,61 @@
 // src/components/Header.js
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 import '../styles/Header.css';
 
 const Header = ({ isDarkMode, toggleBackground }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const handleMobileMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className={`home-header ${isDarkMode ? 'dark' : 'light'}`}>
       <h1>My Portfolio</h1>
       <nav aria-label="Main Navigation">
-        <ul>
+        <ul className={isMobileMenuOpen ? 'nav-links active' : 'nav-links'}>
           <li>
-            <NavLink 
-              to="/home" 
-              className={({ isActive }) => isActive ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
+            <Link
+              to="/home"
+              onClick={closeMobileMenu}
+              className={location.pathname === '/home' ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
             >
               Home
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink 
-              to="/about" 
-              className={({ isActive }) => isActive ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
+            <Link
+              to="/about"
+              onClick={closeMobileMenu}
+              className={location.pathname === '/about' ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
             >
               About
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink 
-              to="/projects" 
-              className={({ isActive }) => isActive ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
+            <Link
+              to="/projects"
+              onClick={closeMobileMenu}
+              className={location.pathname === '/projects' ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
             >
               Projects
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink 
-              to="/contact" 
-              className={({ isActive }) => isActive ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
+            <Link
+              to="/contact"
+              onClick={closeMobileMenu}
+              className={location.pathname === '/contact' ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
             >
               Contact
-            </NavLink>
+            </Link>
           </li>
           <li>
             <button
@@ -52,6 +67,9 @@ const Header = ({ isDarkMode, toggleBackground }) => {
             </button>
           </li>
         </ul>
+        <div className="mobile-menu-icon" onClick={handleMobileMenuToggle}>
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </div>
       </nav>
     </header>
   );
