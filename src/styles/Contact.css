@@ -12,12 +12,12 @@
 
 .contact-container.dark {
   background-color: transparent; /* Ensure it doesn't override the App's background image */
-  color: white;
+  color: #333;
 }
 
 .contact-container.light {
   background-color: transparent; /* Ensure it doesn't override the App's background image */
-  color: #333;
+  color: #943c64;
 }
 
 .contact-title {
@@ -48,10 +48,13 @@
   transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #ffffff; /* Change to your preferred hover color */
+.social-icons.dark a:hover {
+  color: #943c64; /* Change to your preferred hover color */
 }
 
+.social-icons.light a:hover {
+  color: #333; /* Change to your preferred hover color */
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-title {

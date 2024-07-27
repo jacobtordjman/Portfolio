@@ -1,111 +1,88 @@
+/* src/pages/Home.css */
 .home-container {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 100vh; /* Full height */
 }
 
 .home-container.dark {
-  color: white;
+  background-color: transparent;
+  color: #333;
 }
 
 .home-container.light {
-  color: black;
+  background-color: transparent;
+  color: #3681be;
 }
 
 .home-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 80vh;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .home-text {
   flex: 1;
-  padding: 20px;
-}
-
-.home-text h1 {
-  font-size: 3em;
-  margin: 0;
-}
-
-.home-text h2 {
-  font-size: 2em;
-  font-weight: bold;
+  max-width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* Full height */
+  padding: 0 20px; /* Adjust padding for centering */
 }
 
 .typewriter-container {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center; /* Center align the typewriter */
+  font-size: 1.5em; /* Increase font size */
 }
 
-.typewriter {
-  font-weight: bold;
+.home-text h1, .home-text h2 {
+  font-size: 2.5em; /* Increase heading sizes */
 }
 
 .home-buttons {
   margin-top: 20px;
 }
 
-.btn-primary, .btn-secondary {
-  padding: 10px 20px;
-  margin: 10px;
+.home-buttons button {
+  padding: 15px 30px;
+  margin: 0 10px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.2em; /* Increase button text size */
 }
 
-.btn-primary.dark, .btn-secondary.dark {
-  background-color: #333;
-  color: white;
-}
-
-.btn-primary.light, .btn-secondary.light {
-  background-color: white;
-  color: #333;
-  border: 1px solid #333;
-}
-
-.btn-primary.dark:hover, .btn-secondary.dark:hover {
+.home-buttons button.dark {
   background-color: white;
   color: #333;
 }
 
-.btn-primary.light:hover, .btn-secondary.light:hover {
+.home-buttons button.light {
   background-color: #333;
   color: white;
 }
 
-.home-image {
+.home-buttons button:hover {
+  opacity: 0.8;
+}
+
+.coding-image {
   flex: 1;
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Full height */
 }
 
-.home-image img {
-  max-width: 55%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .home-content {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .home-text h1 {
-    font-size: 2em;
-  }
-
-  .home-text h2 {
-    font-size: 1.5em;
-  }
-
-  .home-buttons {
-    flex-direction: column;
-  }
-
-  .home-image img {
-    max-width: 80%;
-    display: none; /* Hide on mobile */
-  }
+.coding-image img {
+  max-width: 100%;
+  height: 100%;
 }

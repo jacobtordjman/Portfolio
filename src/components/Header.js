@@ -7,6 +7,10 @@ import '../styles/Header.css';
 const Header = ({ isDarkMode, toggleBackground }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleToggleClick = () => {
+    toggleBackground();
+  };
+
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
@@ -19,15 +23,7 @@ const Header = ({ isDarkMode, toggleBackground }) => {
     <header className={`home-header ${isDarkMode ? 'dark' : 'light'}`}>
       <h1>My Portfolio</h1>
       <nav aria-label="Main Navigation">
-        <button
-          className={`menu-toggle ${isDarkMode ? 'dark' : 'light'}`}
-          onClick={handleMenuToggle}
-          aria-label="Toggle Menu"
-        >
-          <FaBars />
-        </button>
-        <div className={`nav-overlay ${menuOpen ? 'open' : ''}`} onClick={handleMenuToggle}></div>
-        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <ul className={menuOpen ? 'menu-open' : ''}>
           <li><Link to="/home" onClick={handleLinkClick}>Home</Link></li>
           <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
           <li><Link to="/projects" onClick={handleLinkClick}>Projects</Link></li>
@@ -35,13 +31,20 @@ const Header = ({ isDarkMode, toggleBackground }) => {
           <li>
             <button
               className={`toggle-bg-button ${isDarkMode ? 'dark' : 'light'}`}
-              onClick={toggleBackground}
+              onClick={handleToggleClick}
               aria-label="Toggle Background"
             >
               {isDarkMode ? <FaSun /> : <FaMoon />}
             </button>
           </li>
         </ul>
+        <button
+          className="menu-toggle"
+          onClick={handleMenuToggle}
+          aria-label="Toggle Menu"
+        >
+          <FaBars />
+        </button>
       </nav>
     </header>
   );

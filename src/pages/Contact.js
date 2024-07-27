@@ -47,7 +47,7 @@ const Contact = ({ isDarkMode }) => {
         animate="visible"
         custom={2}
       >
-        As of now, I'm not looking for any new job opportunities, but my inbox is always open if you want to communicate with me. Hit me up if you have some question, want a collaboration or just play a game of chess. I'll try to get back to you as soon as I can.
+        As of now, I'm not looking for any new job opportunities, but my inbox is always open if you want to communicate with me. Hit me up if you have some questions, want a collaboration, or just want to play a game of chess. I'll try to get back to you as soon as I can.
       </motion.p>
       <motion.div
         className="contact-socials"
@@ -57,17 +57,17 @@ const Contact = ({ isDarkMode }) => {
         custom={3}
       >
         <h2>Here are my Socials</h2>
-        <div className="social-icons">
-          <a href="https://www.linkedin.com/in/jacobtordjman" target="_blank" rel="noopener noreferrer">
+        <div className={`social-icons ${isDarkMode ? 'dark' : 'light'}`}>
+          <a href="https://www.linkedin.com/in/jacobtordjman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/jacobtordjman" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jacobtordjman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub />
           </a>
-          <a href="https://leetcode.com/JakeWanSkywalker" target="_blank" rel="noopener noreferrer">
+          <a href="https://leetcode.com/JakeWanSkywalker" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
             <FaCode />
           </a>
-          <a href="mailto:jacobtordjman10220@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:jacobtordjman10220@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
             <FaEnvelope />
           </a>
         </div>

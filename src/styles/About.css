@@ -1,28 +1,39 @@
 /* src/pages/About.css */
 .about-container {
-    text-align: center;
-    padding: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-container.dark {
+  background-color: transparent;
+  color: #333;
+}
+
+.about-container.light {
+  background-color: transparent;
+  color: #e26b48;
+}
+
+/* Center the chart container */
+.chart-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container h1 {
+    font-size: 2em;
   }
-  
-  .about-container.dark {
-    background-color: transparent;
-    color: white;
+
+  .about-container p {
+    font-size: 1em;
   }
-  
-  .about-container.light {
-    background-color: transparent;
-    color: #333;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .about-container h1 {
-      font-size: 2em;
-    }
-  
-    .about-container p {
-      font-size: 1em;
-    }
-  }
-  
+}

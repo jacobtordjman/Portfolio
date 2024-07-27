@@ -3,17 +3,18 @@ import React from 'react';
 import '../styles/Home.css';
 import Typewriter from 'typewriter-effect';
 import { useNavigate } from 'react-router-dom';
+import ProgrammingImage from '../assets/images/Programming2.svg';
 
 const Home = ({ isDarkMode }) => {
   const navigate = useNavigate();
-
+  
   const handleContactClick = () => {
     navigate('/contact');
   };
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '../assets/files/CV.pdf';
+    link.href = '../assets/files/CV.pdf'; // Update this with the actual path to your CV file
     link.download = 'Jacob Tordjman.pdf';
     link.click();
   };
@@ -41,8 +42,8 @@ const Home = ({ isDarkMode }) => {
             <button className={`btn-secondary ${isDarkMode ? 'dark' : 'light'}`} onClick={handleDownloadResume}>Download Resume</button>
           </div>
         </div>
-        <div className={`coding-image ${isDarkMode ? 'dark' : 'light'}`}>
-          <img src={require('../assets/images/Programming.svg').default} alt="Illustration" />
+        <div className="home-image">
+          <img src={ProgrammingImage} alt="Illustration" />
         </div>
       </div>
     </div>
@@ -50,3 +51,6 @@ const Home = ({ isDarkMode }) => {
 };
 
 export default Home;
+
+
+

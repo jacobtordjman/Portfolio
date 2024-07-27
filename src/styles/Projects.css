@@ -7,12 +7,12 @@
   
   .projects-container.dark {
     background-color: transparent;
-    color: white;
+    color: #333;
   }
   
   .projects-container.light {
     background-color: transparent;
-    color: #333;
+    color: #d53736;
   }
   
   /* Responsive Design */

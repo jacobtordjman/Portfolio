@@ -1,20 +1,21 @@
+/* src/components/Footer.css */
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+  text-align: center;
+  padding: 20px;
   background-color: rgba(51, 51, 51, 0.5); /* Default to dark mode */
-  width: 100%;
+  color: #333;
   position: fixed;
+  width: 100%;
   bottom: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer.light {
   background-color: rgba(255, 255, 255, 0.5); /* 50% transparent for light mode */
-  color: #333;
+  color: rgb(219, 58, 58);
 }
 
 .footer.dark {
   background-color: rgba(51, 51, 51, 0.5); /* 50% transparent for dark mode */
-  color: white;
+  color: #333;
 }

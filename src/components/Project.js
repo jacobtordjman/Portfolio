@@ -1,14 +1,16 @@
-// src/components/Project.js
+// src/pages/Project.js
 import React from 'react';
-import '../styles/Project.css';
 
-
-const Project = ({ title, description, imageUrl, imageAlt }) => {
+const Project = ({ title, description, techStack }) => {
   return (
     <div className="project">
-      <img src={imageUrl} alt={imageAlt} />
       <h3>{title}</h3>
       <p>{description}</p>
+      <ul>
+        {techStack.map((tech, index) => (
+          <li key={index}>{tech}</li>
+        ))}
+      </ul>
     </div>
   );
 };
