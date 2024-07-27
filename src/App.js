@@ -32,7 +32,7 @@ function App() {
     >
       <Header isDarkMode={isDarkMode} toggleBackground={toggleBackground} />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/Portfolio" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home isDarkMode={isDarkMode} />} />
         <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
         <Route path="/projects" element={<Projects isDarkMode={isDarkMode} />} />
