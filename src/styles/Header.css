@@ -3,8 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 0 10px; /* Removed vertical padding to align with the height of the header */
   background-color: rgba(51, 51, 51, 0.5); /* Default to dark mode */
+  height: 60px; /* Set a fixed height for the header */
 }
 
 .home-header.light {
@@ -25,42 +26,57 @@
   margin-left: auto; /* Align the navigation to the right */
 }
 
-.home-header nav .menu-toggle {
-  display: none;
-  font-size: 1.5em;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-}
-
-.home-header nav .nav-overlay {
-  display: none;
-}
-
 .home-header nav ul {
   list-style: none;
   padding: 0;
   display: flex;
   margin: 0;
+  height: 100%; /* Make the nav take the full height of the header */
 }
 
 .home-header nav ul li {
-  margin: 0 10px;
+  margin: 0 0;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  height: 100%; /* Make the li take the full height of the nav */
 }
 
 .home-header nav ul li a {
   color: inherit;
   text-decoration: none;
+  padding: 0 15px; /* Horizontal padding only */
+  border-radius: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center; /* Center text vertically */
+  height: 100%; /* Make the a take the full height of the li */
+  line-height: 60px; /* Match the height of the header for vertical centering */
 }
 
 .home-header nav ul li a:hover {
-  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+}
+
+.home-header nav ul li .active-link {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+}
+
+.home-header nav ul li .active-link.dark {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+}
+
+.home-header nav ul li .active-link.light {
+  background-color: rgba(51, 51, 51, 0.7);
+  color: white;
 }
 
 .toggle-bg-button {
   border: none;
   background: none;
+  padding: 15px 0;
   font-size: 1.5em;
   cursor: pointer;
   margin-left: 10px; /* Add margin to the left of the toggle button */
@@ -72,60 +88,4 @@
 
 .toggle-bg-button.light {
   color: #333;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .home-header nav .menu-toggle {
-    display: block;
-  }
-
-  .home-header nav .nav-overlay {
-    display: none;
-  }
-
-  .home-header nav ul {
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 250px;
-    background: rgba(51, 51, 51, 0.95);
-    display: none;
-    padding-top: 60px;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
-  }
-
-  .home-header nav ul.open {
-    display: flex;
-    transform: translateX(0);
-  }
-
-  .home-header nav .nav-overlay.open {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
-
-  .home-header nav ul li {
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .home-header nav ul li a {
-    font-size: 1.2em;
-  }
-
-  .home-header nav ul li button.toggle-bg-button {
-    font-size: 1.2em;
-    margin: 20px 0;
-  }
 }

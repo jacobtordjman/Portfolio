@@ -87,7 +87,8 @@
   height: 100%;
 }
 
-/* Programming SVG Animations */
+
+/* Programming SVG Animations
 svg#freepik_stories-developer-activity:not(.animated) .animable {
   opacity: 0;
 }
@@ -152,4 +153,4 @@ svg#freepik_stories-developer-activity.animated #freepik--Character--inject-2 {
   100% {
     opacity: 1;
   }
-}
+} */

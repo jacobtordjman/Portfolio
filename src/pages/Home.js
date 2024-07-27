@@ -4,6 +4,9 @@ import '../styles/Home.css';
 import Typewriter from 'typewriter-effect';
 import { useNavigate } from 'react-router-dom';
 
+import Programming from '../assets/images/Programming.svg';
+import ProgrammingInverse from '../assets/images/ProgrammingInverse.svg';
+
 const Home = ({ isDarkMode }) => {
   const navigate = useNavigate();
 
@@ -42,7 +45,7 @@ const Home = ({ isDarkMode }) => {
           </div>
         </div>
         <div className={`coding-image ${isDarkMode ? 'dark' : 'light'}`}>
-          <img src={require('../assets/images/Programming.svg').default} alt="Illustration" />
+          <img src={isDarkMode ? Programming : ProgrammingInverse} alt="Illustration" />
         </div>
       </div>
     </div>
