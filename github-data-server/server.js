@@ -30,6 +30,7 @@ app.get('/api/github-data', async (req, res) => {
     const repos = response.data;
 
     const languageCounts = {};
+    const validLanguages = ['CSS', 'HTML', 'JavaScript', 'Python', 'Java', 'C++', 'C', 'TypeScript'];
 
     const languageRequests = repos.map(async (repo) => {
       const languagesUrl = repo.languages_url;
@@ -41,10 +42,12 @@ app.get('/api/github-data', async (req, res) => {
       const languages = languagesResponse.data;
 
       for (const [language, count] of Object.entries(languages)) {
-        if (languageCounts[language]) {
-          languageCounts[language] += count;
-        } else {
-          languageCounts[language] = count;
+        if (validLanguages.includes(language)) {
+          if (languageCounts[language]) {
+            languageCounts[language] += count;
+          } else {
+            languageCounts[language] = count;
+          }
         }
       }
     });

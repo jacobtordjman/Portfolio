@@ -47,7 +47,7 @@ const Contact = ({ isDarkMode }) => {
         animate="visible"
         custom={2}
       >
-        As of now, I'm not looking for any new job opportunities, but my inbox is always open if you want to communicate with me. Hit me up if you have some questions, want a collaboration, or just want to play a game of chess. I'll try to get back to you as soon as I can.
+        {"I'm always open to discussing new opportunities, collaborating on projects, or simply connecting with fellow developers. Feel free to reach out to me through the following channels"}
       </motion.p>
       <motion.div
         className="contact-socials"

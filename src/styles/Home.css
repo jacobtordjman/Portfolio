@@ -53,11 +53,13 @@
 
 .home-buttons button {
   padding: 15px 30px;
-  margin: 0 10px;
+  margin: 10px; /* Add margin between buttons */
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 1.2em; /* Increase button text size */
+  border-radius: 10px; /* Round button corners */
+  width: calc(50% - 20px); /* Ensure buttons are the same size and have space between */
 }
 
 .home-buttons button.dark {
@@ -113,5 +115,7 @@
 
   .home-buttons button {
     font-size: 1em;
+    width: 100%; /* Full width on mobile */
+    margin: 10px 0; /* Add vertical margin for mobile */
   }
 }

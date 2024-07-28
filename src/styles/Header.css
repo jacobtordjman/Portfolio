@@ -3,9 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px; /* Removed vertical padding to align with the height of the header */
+  padding: 0 10px; /* Adjust padding */
   background-color: rgba(51, 51, 51, 0.5); /* Default to dark mode */
   height: 60px; /* Set a fixed height for the header */
+  z-index: 1000; /* Ensure header stays on top */
 }
 
 .home-header.light {
@@ -20,6 +21,8 @@
 
 .home-header h1 {
   margin: 0;
+  font-size: 1.5em; /* Adjusted font size */
+  color: inherit;
 }
 
 .home-header nav {
@@ -104,11 +107,13 @@
     flex-direction: column;
     width: 100%;
     background-color: rgba(51, 51, 51, 0.9);
-    position: absolute;
+    position: fixed; /* Change from absolute to fixed */
     top: 60px; /* Below the header */
     left: 0;
     padding: 20px 0;
     z-index: 1000; /* Ensure the menu is on top */
+    height: calc(100vh - 60px); /* Ensure it covers the remaining viewport height */
+    overflow-y: auto; /* Enable scrolling if needed */
   }
 
   .nav-links.active {
