@@ -35,7 +35,7 @@ const About = ({ isDarkMode }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/github-data');
+        const response = await axios.get('https://portfolio-1x75.onrender.com/api/github-data');
         setTechStack(response.data);
         setLoading(false);
       } catch (error) {
