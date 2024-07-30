@@ -1,12 +1,5 @@
-// src/pages/About.js
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-} from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import '../styles/About.css';
 
@@ -24,26 +17,18 @@ import javaIcon from '../assets/images/java-icon.png';
 import cppIcon from '../assets/images/cpp-icon.png';
 import cIcon from '../assets/images/c-icon.png';
 
+// Importing the JSON data
+import githubCodingData from '../data/github-coding-data.json';
+
 // Register necessary elements
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const About = ({ isDarkMode }) => {
   const [techStack, setTechStack] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('https://portfolio-1x75.onrender.com/api/github-data');
-        setTechStack(response.data);
-        setLoading(false);
-      } catch (error) {
-        setError(error);
-        setLoading(false);
-      }
-    };
-    fetchData();
+    // Initialize the state with the imported JSON data
+    setTechStack(githubCodingData);
   }, []);
 
   const data = {
@@ -108,8 +93,6 @@ const About = ({ isDarkMode }) => {
       <h1>About Me</h1>
       <p>{"I'm a passionate student software developer with a strong interest in mobile and full-stack development. Currently honing my skills in building dynamic, user-centric applications, I enjoy working on both front-end and back-end technologies to create seamless, end-to-end solutions. Driven by curiosity and a love for problem-solving, I'm excited to explore new technologies and contribute to innovative projects that enhance user experiences. My goal is to continuously learn and grow in the tech industry while delivering impactful and efficient software solutions."}</p>
       <h2>My Tech Stack</h2>
-      {loading && <p>Loading...</p>}
-      {error && <p>Error fetching data</p>}
       <div className="layout-container">
         <div className="tech-stack">
           {technologies.map((tech, index) => (

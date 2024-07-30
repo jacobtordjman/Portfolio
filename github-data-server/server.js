@@ -1,6 +1,8 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -10,17 +12,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 app.use(cors());
 
-let cachedData = null;
-let cacheTimestamp = null;
-const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
-
-app.get('/api/github-data', async (req, res) => {
-  const now = Date.now();
-
-  if (cachedData && cacheTimestamp && (now - cacheTimestamp < CACHE_DURATION)) {
-    return res.json(cachedData);
-  }
-
+const fetchGitHubData = async () => {
   try {
     const response = await axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos`, {
       headers: {
@@ -53,16 +45,84 @@ app.get('/api/github-data', async (req, res) => {
     });
 
     await Promise.all(languageRequests);
-
-    cachedData = languageCounts;
-    cacheTimestamp = now;
-
-    res.json(languageCounts);
+    return languageCounts;
   } catch (error) {
     console.error('Error fetching GitHub data:', error.message);
     console.error('Stack Trace:', error.stack);
+    throw error;
+  }
+};
+
+const fetchProjectData = async () => {
+  try {
+    const response = await axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos`, {
+      headers: {
+        Authorization: `token ${GITHUB_TOKEN}`
+      }
+    });
+    const repos = response.data;
+
+    const projectData = repos.map(repo => ({
+      name: repo.name,
+      description: repo.description || 'No description provided.',
+      technologies: [],  // This will be filled in by language data
+      link: repo.html_url
+    }));
+
+    const languageRequests = repos.map(async (repo, index) => {
+      const languagesUrl = repo.languages_url;
+      const languagesResponse = await axios.get(languagesUrl, {
+        headers: {
+          Authorization: `token ${GITHUB_TOKEN}`
+        }
+      });
+      const languages = Object.keys(languagesResponse.data);
+      projectData[index].technologies = languages;
+    });
+
+    await Promise.all(languageRequests);
+    return projectData;
+  } catch (error) {
+    console.error('Error fetching GitHub project data:', error.message);
+    console.error('Stack Trace:', error.stack);
+    throw error;
+  }
+};
+
+const saveDataToFile = (data, filename) => {
+  try {
+    const dataDir = path.join(__dirname, '../src/data');
+    const dataFilePath = path.join(dataDir, filename);
+
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
+    fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error(`Error saving data to file ${filename}:`, error.message);
+    console.error('Stack Trace:', error.stack);
+    throw error;
+  }
+};
+
+app.get('/api/github-data', async (req, res) => {
+  try {
+    const languageCounts = await fetchGitHubData();
+    const projectData = await fetchProjectData();
+    
+    saveDataToFile(languageCounts, 'github-coding-data.json');
+    saveDataToFile(projectData, 'github-projects.json');
+
+    res.json({ languages: languageCounts, projects: projectData });
+  } catch (error) {
     res.status(500).send('Error fetching GitHub data');
   }
+});
+
+// Root URL route
+app.get('/', (req, res) => {
+  res.send('Welcome to the GitHub Data Server!');
 });
 
 app.listen(port, () => {

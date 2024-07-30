@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Drum-Kit",
+    "description": "No description provided.",
+    "technologies": [
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "link": "https://github.com/jacobtordjman/Drum-Kit"
+  },
+  {
+    "name": "Exponenia",
+    "description": "No description provided.",
+    "technologies": [
+      "TypeScript",
+      "Kotlin",
+      "Objective-C",
+      "Ruby",
+      "Objective-C++",
+      "JavaScript"
+    ],
+    "link": "https://github.com/jacobtordjman/Exponenia"
+  },
+  {
+    "name": "GameOfLife",
+    "description": "No description provided.",
+    "technologies": [
+      "Java"
+    ],
+    "link": "https://github.com/jacobtordjman/GameOfLife"
+  },
+  {
+    "name": "Mini-Linux-Shell",
+    "description": "No description provided.",
+    "technologies": [
+      "C",
+      "Shell"
+    ],
+    "link": "https://github.com/jacobtordjman/Mini-Linux-Shell"
+  },
+  {
+    "name": "Password-Manager",
+    "description": "No description provided.",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/jacobtordjman/Password-Manager"
+  },
+  {
+    "name": "Portfolio",
+    "description": "No description provided.",
+    "technologies": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "link": "https://github.com/jacobtordjman/Portfolio"
+  },
+  {
+    "name": "Quizzer",
+    "description": "No description provided.",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/jacobtordjman/Quizzer"
+  },
+  {
+    "name": "Simon-Game",
+    "description": "No description provided.",
+    "technologies": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://github.com/jacobtordjman/Simon-Game"
+  },
+  {
+    "name": "SnakeGame",
+    "description": "No description provided.",
+    "technologies": [
+      "Python",
+      "Tcl",
+      "TeX",
+      "HTML",
+      "PowerShell",
+      "Batchfile"
+    ],
+    "link": "https://github.com/jacobtordjman/SnakeGame"
+  },
+  {
+    "name": "The-Dice-Games-Web",
+    "description": "No description provided.",
+    "technologies": [
+      "CSS",
+      "HTML",
+      "JavaScript"
+    ],
+    "link": "https://github.com/jacobtordjman/The-Dice-Games-Web"
+  },
+  {
+    "name": "TurtleCrossingGame",
+    "description": "No description provided.",
+    "technologies": [
+      "Python",
+      "TeX",
+      "HTML",
+      "PowerShell",
+      "Batchfile"
+    ],
+    "link": "https://github.com/jacobtordjman/TurtleCrossingGame"
+  },
+  {
+    "name": "WeatherForecast",
+    "description": "No description provided.",
+    "technologies": [
+      "C++",
+      "C",
+      "Objective-C++",
+      "Objective-C",
+      "Makefile",
+      "Batchfile",
+      "CMake",
+      "HTML",
+      "Kotlin",
+      "GLSL",
+      "GDB",
+      "Shell"
+    ],
+    "link": "https://github.com/jacobtordjman/WeatherForecast"
+  }
+]
