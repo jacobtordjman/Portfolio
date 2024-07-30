@@ -28,7 +28,7 @@ const Home = ({ isDarkMode }) => {
           <h2>Hi there,</h2>
           <h1>My name is Jacob</h1>
           <h2 className="typewriter-container">
-            I am&nbsp;
+            I am a&nbsp;
             <span className="typewriter">
               <Typewriter
                 options={{

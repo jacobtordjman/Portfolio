@@ -1,4 +1,4 @@
-/* src/pages/Home.css */
+/* src/styles/Home.css */
 .home-container {
   display: flex;
   align-items: center;
@@ -34,6 +34,16 @@
   justify-content: center;
   height: 100%; /* Full height */
   padding: 0 20px; /* Adjust padding for centering */
+}
+
+.intro-text {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align the intro text */
+}
+
+.intro-static {
+  margin-right: 10px;
 }
 
 .typewriter-container {
@@ -98,6 +108,10 @@
   .home-text {
     max-width: 100%;
     margin-bottom: 20px;
+  }
+
+  .intro-text {
+    flex-direction: column;
   }
 
   .coding-image {

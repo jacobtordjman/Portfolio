@@ -1,28 +1,94 @@
-/* src/pages/Projects.css */
+/* src/styles/Projects.css */
 .projects-container {
-    text-align: center;
-    padding: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.projects-container.dark {
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+.projects-container.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.project-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.project-actions a,
+.project-actions button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.project-actions a:hover,
+.project-actions button:hover {
+  color: #fca311;
+}
+
+/* Light card style for dark mode */
+.project-card.light-card {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark card style for light mode */
+.project-card.dark-card {
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-list {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .projects-container.dark {
-    background-color: transparent;
-    color: #333;
+
+  .project-card {
+    width: 90%;
   }
-  
-  .projects-container.light {
-    background-color: transparent;
-    color: #d53736;
+
+  .project-actions {
+    justify-content: center;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .projects-container h1 {
-      font-size: 2em;
-    }
-  
-    .projects-container p {
-      font-size: 1em;
-    }
-  }
-  
+}
+
+
+  /* #d53736 */
