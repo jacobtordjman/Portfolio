@@ -126,9 +126,9 @@
     position: fixed; /* Change from absolute to fixed */
     top: 60px; /* Below the header */
     left: 0;
-    padding: 20px 0;
+    padding: 10px 0; /* Reduced padding to make it thinner */
     z-index: 1000; /* Ensure the menu is on top */
-    height: calc(100vh - 60px); /* Ensure it covers the remaining viewport height */
+    height: 300px; /* Ensure it covers the remaining viewport height */
     overflow-y: auto; /* Enable scrolling if needed */
   }
 
@@ -137,9 +137,15 @@
   }
 
   .nav-links li {
-    margin: 30px 0;
+    margin: 5px 0; /* Reduce margin between items */
     width: 100%;
     align-items: center;
+  }
+
+  .nav-links li a {
+    line-height: 40px; /* Reduce line-height to make it thinner */
+    height: auto; /* Adjust height to be auto */
+    padding: 10px 15px; /* Reduced padding to make it thinner */
   }
 
   .mobile-menu-icon {
