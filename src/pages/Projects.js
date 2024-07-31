@@ -15,7 +15,7 @@ const Projects = ({ isDarkMode }) => {
 
   return (
     <div className={`projects-container ${isDarkMode ? 'dark' : 'light'}`}>
-      <h1>Projects</h1>
+      <h1 className={`${isDarkMode ? 'dark' : 'light'}`}>Projects</h1>
       <div className="projects-list">
         {projects.map((project, index) => (
           <div key={index} className={`project-card ${isDarkMode ? 'light-card' : 'dark-card'}`}>

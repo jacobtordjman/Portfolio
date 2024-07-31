@@ -1,10 +1,10 @@
 {
-  "CSS": 14227,
-  "JavaScript": 21983,
+  "CSS": 15409,
+  "JavaScript": 23755,
   "HTML": 485338,
-  "Python": 13525931,
+  "TypeScript": 2981,
   "Java": 10127,
   "C": 2298878,
-  "C++": 5035777,
-  "TypeScript": 2981
+  "Python": 13521420,
+  "C++": 5035777
 }

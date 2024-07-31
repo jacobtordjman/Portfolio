@@ -5,16 +5,6 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.projects-container.dark {
-  background-color: #1a1a2e;
-  color: #ffffff;
-}
-
-.projects-container.light {
-  background-color: #ffffff;
-  color: #000000;
-}
-
 .projects-list {
   display: flex;
   flex-wrap: wrap;
@@ -59,19 +49,29 @@
 
 .project-actions a:hover,
 .project-actions button:hover {
-  color: #fca311;
+  color: #3681be;
 }
 
 /* Light card style for dark mode */
 .project-card.light-card {
   background-color: #ffffff;
-  color: #000000;
+  color: #333;
+  opacity: 0.7;
 }
 
 /* Dark card style for light mode */
 .project-card.dark-card {
-  background-color: #1a1a2e;
-  color: #ffffff;
+  background-color: #333;
+  color: #A83A32;
+  opacity: 0.7;
+}
+
+h1.dark{
+  color:#333;
+}
+
+h1.light{
+  color:#A83A32;
 }
 
 /* Responsive Design */
@@ -90,5 +90,3 @@
   }
 }
 
-
-  /* #d53736 */

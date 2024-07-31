@@ -1,7 +1,7 @@
 [
   {
     "name": "Drum-Kit",
-    "description": "No description provided.",
+    "description": "Simulation of a drum kit using either key-strokes or the mouse. Try your best to become the Drum Hero.",
     "technologies": [
       "CSS",
       "JavaScript",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Exponenia",
-    "description": "No description provided.",
+    "description": "Exponenia is a challenging game that includes problem solving in a fun way. Exponenia uses the logic of the game '2048' but in a very different angle.",
     "technologies": [
       "TypeScript",
       "Kotlin",
@@ -24,7 +24,7 @@
   },
   {
     "name": "GameOfLife",
-    "description": "No description provided.",
+    "description": "This project is an implementation of Conway's Game of Life, a cellular automaton devised by mathematician John Conway. The game consists of a grid of cells that evolve through generations according to a set of simple rules. This project provides an interactive interface to visualize and control the simulation.",
     "technologies": [
       "Java"
     ],
@@ -32,7 +32,7 @@
   },
   {
     "name": "Mini-Linux-Shell",
-    "description": "No description provided.",
+    "description": " The Custom Shell Project implements a custom shell in C with various functionalities akin to a Unix shell. Key features include command execution, background job management, aliasing, command redirection, logical operators, and script execution. Commands are executed via fork and execvp, with proper signal handling and error reporting.",
     "technologies": [
       "C",
       "Shell"
@@ -41,7 +41,7 @@
   },
   {
     "name": "Password-Manager",
-    "description": "No description provided.",
+    "description": "MyPass is a simple and intuitive password manager that allows users to securely store and generate passwords for various websites. This application provides a user-friendly interface for managing your credentials in one place.",
     "technologies": [
       "Python"
     ],
@@ -49,7 +49,7 @@
   },
   {
     "name": "Portfolio",
-    "description": "No description provided.",
+    "description": "This is my Portfolio which is always under construction and always improving, just like my skills. The website is written using React.js and Node.js, JS and CSS",
     "technologies": [
       "JavaScript",
       "CSS",
@@ -58,16 +58,8 @@
     "link": "https://github.com/jacobtordjman/Portfolio"
   },
   {
-    "name": "Quizzer",
-    "description": "No description provided.",
-    "technologies": [
-      "Python"
-    ],
-    "link": "https://github.com/jacobtordjman/Quizzer"
-  },
-  {
     "name": "Simon-Game",
-    "description": "No description provided.",
+    "description": "Welcome to the Simon Game Web! This project is a web-based implementation of the classic Simon game, where players must remember and repeat increasingly long sequences of colors and sounds. It's a great project to practice web development skills using HTML, CSS, and JavaScript.",
     "technologies": [
       "JavaScript",
       "HTML",
@@ -77,7 +69,7 @@
   },
   {
     "name": "SnakeGame",
-    "description": "No description provided.",
+    "description": "The Snake Game project, written in Python using the Turtle module, features classic gameplay where players control a snake to collect food and grow longer. Key elements include a game loop, collision detection, score tracking, and increasing speed as the snake grows. The game uses Turtle graphics for rendering the snake and food.",
     "technologies": [
       "Python",
       "Tcl",
@@ -90,7 +82,7 @@
   },
   {
     "name": "The-Dice-Games-Web",
-    "description": "No description provided.",
+    "description": "A very simple web app for two individuals to decide who is write, who goes first, who wins and of course who loses.",
     "technologies": [
       "CSS",
       "HTML",
@@ -100,7 +92,7 @@
   },
   {
     "name": "TurtleCrossingGame",
-    "description": "No description provided.",
+    "description": "The Turtle Crossing Game is a fun and interactive game where the player controls a turtle attempting to cross a busy road filled with moving cars. The objective is to avoid the cars and successfully reach the other side of the screen. The game is developed using Python and the turtle graphics module.",
     "technologies": [
       "Python",
       "TeX",
@@ -112,7 +104,7 @@
   },
   {
     "name": "WeatherForecast",
-    "description": "No description provided.",
+    "description": "Weather Forecast project is a C++ application that allows users to fetch and display weather data for various cities using the OpenWeatherMap API. The application features a graphical user interface built with ImGui and uses GLFW and GLEW for window and OpenGL context management.",
     "technologies": [
       "C++",
       "C",
