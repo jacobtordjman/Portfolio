@@ -10,7 +10,12 @@ const port = process.env.PORT || 3001;
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
-app.use(cors());
+const corsOptions = {
+  origin: '*', // Allow all origins (you can restrict this to your Vercel frontend URL)
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 const fetchGitHubData = async () => {
   try {
