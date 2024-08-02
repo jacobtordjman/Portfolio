@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Header from './components/Header';
@@ -17,7 +16,7 @@ function App() {
 
   const toggleBackground = () => {
     setIsDarkMode(!isDarkMode);
-    console.log("Dark Mode Toggled:", !isDarkMode); // This will show the new state of isDarkMode
+    console.log("Dark Mode Toggled:", !isDarkMode);
   };
 
   return (
@@ -32,6 +31,7 @@ function App() {
     >
       <Header isDarkMode={isDarkMode} toggleBackground={toggleBackground} />
       <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/Portfolio" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home isDarkMode={isDarkMode} />} />
         <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
