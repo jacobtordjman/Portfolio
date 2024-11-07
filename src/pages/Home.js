@@ -16,9 +16,11 @@ const Home = ({ isDarkMode }) => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '../assets/files/CV.pdf';
+    link.href = '/CV.pdf'; // Updated path to match the public folder
     link.download = 'Jacob Tordjman.pdf';
+    document.body.appendChild(link); // Append to the document body
     link.click();
+    document.body.removeChild(link); // Clean up after click
   };
 
   return (
