@@ -1,0 +1,41 @@
+useEffect is not defined
+at App (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:51:3)
+at renderWithHooks (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:24653:22)
+at mountIndeterminateComponent (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:28624:17)
+at beginWork (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:29927:20)
+at HTMLUnknownElement.callCallback (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:14909:18)
+at Object.invokeGuardedCallbackDev (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:14953:20)
+at invokeGuardedCallback (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:15010:35)
+at beginWork$1 (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34908:11)
+at performUnitOfWork (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34156:16)
+at workLoopSync (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34079:9)
+useEffect is not defined
+at App (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:51:3)
+at renderWithHooks (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:24653:22)
+at mountIndeterminateComponent (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:28624:17)
+at beginWork (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:29927:20)
+at HTMLUnknownElement.callCallback (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:14909:18)
+at Object.invokeGuardedCallbackDev (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:14953:20)
+at invokeGuardedCallback (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:15010:35)
+at beginWork$1 (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34908:11)
+at performUnitOfWork (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34156:16)
+at workLoopSync (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34079:9)
+The above error occurred in the <App> component:
+
+    at App (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:45:86)
+    at Router (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:40431:15)
+    at BrowserRouter (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:38384:5)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+useEffect is not defined
+at App (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:51:3)
+at renderWithHooks (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:24653:22)
+at mountIndeterminateComponent (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:28624:17)
+at beginWork (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:29927:20)
+at beginWork$1 (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34886:18)
+at performUnitOfWork (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34156:16)
+at workLoopSync (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34079:9)
+at renderRootSync (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:34052:11)
+at recoverFromConcurrentError (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:33544:24)
+at performConcurrentWorkOnRoot (https://aa632dc8-bfc0-4805-9bc5-5f46a765ac5d-00-39fr43i1noqjh.worf.replit.dev/static/js/bundle.js:33457:26)
