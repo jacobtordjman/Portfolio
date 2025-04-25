@@ -7,8 +7,8 @@ const About = lazy(() => import("./pages/About"));
 const Projects = lazy(() => import("./pages/Projects"));
 const Contact = lazy(() => import("./pages/Contact"));
 
-import portfoliobg from "./assets/images/portfoliobg.jpg";
-import portfoliobginverse from "./assets/images/portfoliobginverse.jpg";
+import portfoliobg from "./assets/images/portfoliobg.webp";
+import portfoliobginverse from "./assets/images/portfoliobginverse.webp";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
