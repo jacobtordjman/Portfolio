@@ -33,8 +33,8 @@ const Projects = ({ isDarkMode }) => {
     <div className={`projects-container ${isDarkMode ? "dark" : "light"}`}>
       <h1 className={`${isDarkMode ? "dark" : "light"}`}>Projects</h1>
       <div className="projects-list">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} isDarkMode={isDarkMode} />
+        {projects.slice(0, 12).map((project, index) => (
+          <ProjectCard key={project.name} project={project} isDarkMode={isDarkMode} />
         ))}
       </div>
     </div>
