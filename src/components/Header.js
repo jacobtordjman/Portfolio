@@ -1,8 +1,8 @@
 // src/components/Header.js
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
-import '../styles/Header.css';
+import React, { memo, useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
+import "../styles/Header.css";
 
 const Header = ({ isDarkMode, toggleBackground }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,14 +22,14 @@ const Header = ({ isDarkMode, toggleBackground }) => {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <header className={`home-header ${isDarkMode ? 'dark' : 'light'}`}>
+    <header className={`home-header ${isDarkMode ? "dark" : "light"}`}>
       <h1>Jacob Tordjman</h1>
       <nav aria-label="Main Navigation">
         <div className="header-actions">
@@ -38,19 +38,23 @@ const Header = ({ isDarkMode, toggleBackground }) => {
           </div>
           {isMobileView && (
             <button
-              className={`toggle-bg-button ${isDarkMode ? 'dark' : 'light'}`}
+              className={`toggle-bg-button ${isDarkMode ? "dark" : "light"}`}
               onClick={toggleBackground}
               aria-label="Toggle Background"
             >
               {isDarkMode ? <FaSun /> : <FaMoon />}
             </button>
           )}
-          <ul className={isMobileMenuOpen ? 'nav-links active' : 'nav-links'}>
+          <ul className={isMobileMenuOpen ? "nav-links active" : "nav-links"}>
             <li>
               <Link
                 to="/home"
                 onClick={closeMobileMenu}
-                className={location.pathname === '/home' ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
+                className={
+                  location.pathname === "/home"
+                    ? `active-link ${isDarkMode ? "dark" : "light"}`
+                    : ""
+                }
               >
                 Home
               </Link>
@@ -59,7 +63,11 @@ const Header = ({ isDarkMode, toggleBackground }) => {
               <Link
                 to="/about"
                 onClick={closeMobileMenu}
-                className={location.pathname === '/about' ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
+                className={
+                  location.pathname === "/about"
+                    ? `active-link ${isDarkMode ? "dark" : "light"}`
+                    : ""
+                }
               >
                 About
               </Link>
@@ -68,7 +76,11 @@ const Header = ({ isDarkMode, toggleBackground }) => {
               <Link
                 to="/projects"
                 onClick={closeMobileMenu}
-                className={location.pathname === '/projects' ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
+                className={
+                  location.pathname === "/projects"
+                    ? `active-link ${isDarkMode ? "dark" : "light"}`
+                    : ""
+                }
               >
                 Projects
               </Link>
@@ -77,7 +89,11 @@ const Header = ({ isDarkMode, toggleBackground }) => {
               <Link
                 to="/contact"
                 onClick={closeMobileMenu}
-                className={location.pathname === '/contact' ? `active-link ${isDarkMode ? 'dark' : 'light'}` : ''}
+                className={
+                  location.pathname === "/contact"
+                    ? `active-link ${isDarkMode ? "dark" : "light"}`
+                    : ""
+                }
               >
                 Contact
               </Link>
@@ -85,7 +101,7 @@ const Header = ({ isDarkMode, toggleBackground }) => {
             {!isMobileView && (
               <li className="toggle-bg-list-item desktop-only">
                 <button
-                  className={`toggle-bg-button ${isDarkMode ? 'dark' : 'light'}`}
+                  className={`toggle-bg-button ${isDarkMode ? "dark" : "light"}`}
                   onClick={toggleBackground}
                   aria-label="Toggle Background"
                 >
@@ -100,4 +116,4 @@ const Header = ({ isDarkMode, toggleBackground }) => {
   );
 };
 
-export default Header;
+export default memo(Header);
