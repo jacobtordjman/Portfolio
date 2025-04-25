@@ -67,10 +67,24 @@ const About = ({ isDarkMode }) => {
       legend: {
         position: "right",
         labels: {
-          color: "black", // Set the text color of the legend to black
+          color: isDarkMode ? "white" : "black",
+          padding: 20,
+          font: {
+            size: 14,
+          },
+        },
+      },
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+            const percentage = ((context.raw / total) * 100).toFixed(1);
+            return `${context.label}: ${percentage}%`;
+          },
         },
       },
     },
+    cutout: "65%",
   };
 
   const technologies = [
